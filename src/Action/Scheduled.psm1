@@ -21,6 +21,7 @@ function Initialize-Scheduled {
         'SkipUpdated'  = ($env:SKIP_UPDATED -eq '1')
     }
     if ($env:SPECIAL_SNOWFLAKES) { $params.Add('SpecialSnowflakes', ($env:SPECIAL_SNOWFLAKES -split ',')) }
+    if ($env:COMMIT_MESSAGE_FORMAT) { $params.Add('CommitMessageFormat', $env:COMMIT_MESSAGE_FORMAT) }
     if ($env:THROW_ERROR -eq '1') { $params.Add('ThrowError', $true) }
 
     # Respect any already added GH Tokens
