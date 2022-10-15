@@ -22,6 +22,13 @@ Set of automated actions, which bucket maintainers can use to save time managing
 1. `SPECIAL_SNOWFLAKES`
     - String
     - List of manifest names joined with `,` used as parameter for auto-pr utility.
+1. `COMMIT_MESSAGE_FORMAT`
+    - String
+    - Optional
+    - The format of commit message.
+    - default: `'<app>: Update to version <version>'`
+    - The `<app>` will be replaced with the file name of manifest.
+    - The `<version>` will be replaced with the version of the latest manifest.
 
 ## Available actions
 
